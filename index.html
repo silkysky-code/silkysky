@@ -11,15 +11,23 @@
             margin: 0;
         }
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #8A2BE2, #DA70D6);
             color: white;
             padding: 10px;
             text-align: center;
         }
-        header img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
+        header h1, header h3 {
+            margin: 5px;
+        }
+        header button {
+            cursor: pointer;
+            background-color: white;
+            color: #6A0DAD;
+            padding: 10px;
+            border: none;
+            font-size: 14px;
+            margin-top: 10px;
+            border-radius: 5px;
         }
         .intro-section, .vision, .founder-message, .services {
             padding: 20px;
@@ -35,37 +43,22 @@
             max-width: 100%;
             height: auto;
         }
-        .founder-message {
+        .intro-section, .vision, .founder-message, .services {
             display: flex;
             align-items: center;
         }
-        .founder-message img {
-            max-width: 50%;
-            margin-right: 20px;
-        }
-        .services {
-            display: flex;
-            justify-content: space-between;
-        }
-        .services img {
-            max-width: 40%;
+        .intro-section img, .founder-message img, .services img {
+            width: 40%;
             margin-left: 20px;
+        }
+        .intro-section div, .founder-message div, .services div {
+            width: 60%;
         }
         footer {
             text-align: center;
             padding: 10px;
             background-color: #333;
             color: white;
-        }
-        .lang-switch {
-            cursor: pointer;
-            background-color: #6A0DAD;
-            color: white;
-            padding: 10px;
-            border: none;
-            font-size: 14px;
-            margin-top: 10px;
-            border-radius: 5px;
         }
     </style>
     <script>
@@ -91,15 +84,17 @@
     </header>
 
     <section class="company-intro intro-section">
-        <h2 class="en">Company Overview</h2>
-        <h2 class="zh">公司简介</h2>
-        <img src="https://www.silkroute.com/images/header.jpg" alt="Silk Route Banner" style="display: block; margin: 20px auto;">
-        <p class="en">
-            Silk Route Navigators is a company specializing in bespoke high-end business tours, focused on providing entrepreneurs, investors, and industry leaders from Europe, the US, and other developed countries with deep market insights. We explore the technological innovation, advanced manufacturing, and business ecosystems of China’s Yangtze River Delta, leveraging close partnerships with leading companies, universities, and government entities to deliver unparalleled business tour experiences.
-        </p>
-        <p class="zh">
-            丝路领航是一家专注于提供高端定制化商务考察的公司，旨在为来自欧美及其他发达国家的企业家、投资人及行业领袖提供深入的市场洞察。我们深入考察中国长三角的科技创新、先进制造和商业生态系统，借助与领先企业、大学及政府机构的紧密合作，为客户提供无与伦比的商务考察体验。
-        </p>
+        <div>
+            <h2 class="en">Company Overview</h2>
+            <h2 class="zh">公司简介</h2>
+            <p class="en">
+                Silk Route Navigators is a company specializing in bespoke high-end business tours, focused on providing entrepreneurs, investors, and industry leaders from Europe, the US, and other developed countries with deep market insights. We explore the technological innovation, advanced manufacturing, and business ecosystems of China’s Yangtze River Delta, leveraging close partnerships with leading companies, universities, and government entities to deliver unparalleled business tour experiences.
+            </p>
+            <p class="zh">
+                丝路领航是一家专注于提供高端定制化商务考察的公司，旨在为来自欧美及其他发达国家的企业家、投资人及行业领袖提供深入的市场洞察。我们深入考察中国长三角的科技创新、先进制造和商业生态系统，借助与领先企业、大学及政府机构的紧密合作，为客户提供无与伦比的商务考察体验。
+            </p>
+        </div>
+        <img src="https://www.silkroute.com/images/header.jpg" alt="Silk Route Banner">
     </section>
 
     <section class="vision">
@@ -114,7 +109,6 @@
     </section>
 
     <section class="founder-message">
-        <img src="https://www.silkroute.com/images/business2.jpg" alt="Founder">
         <div>
             <h2 class="en">Founder's Message</h2>
             <h2 class="zh">创始人寄语</h2>
@@ -125,9 +119,11 @@
                 作为丝路领航的创始人，我坚信科技创新与商业繁荣密不可分。中国在科技与制造领域的崛起不仅是全球经济格局中不可忽视的一部分，同时也为世界带来了无数的机遇。通过我们的高端服务，我们希望帮助全球企业理解并掌握这一充满活力的环境，利用中国的增长为其战略优势提供动力。我们承诺通过量身定制的商务考察为客户提供最具洞察力和价值的体验。
             </p>
         </div>
+        <img src="https://www.silkroute.com/images/business2.jpg" alt="Founder">
     </section>
 
     <section class="services">
+        <img src="https://www.silkroute.com/images/business.jpg" alt="Business Services">
         <div>
             <h2 class="en">Our Main Products and Services</h2>
             <h2 class="zh">公司主要产品与服务</h2>
@@ -138,7 +134,6 @@
                 我们的服务包括：访问中国顶级公司、定制商务会议、参观创新中心及策划大型展会体验。我们还为客户提供与行业专家和政府官员的私人会议，让他们深入了解中国市场及其战略机遇。
             </p>
         </div>
-        <img src="https://www.silkroute.com/images/business.jpg" alt="Business Services">
     </section>
 
     <footer>
