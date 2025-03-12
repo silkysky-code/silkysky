@@ -3,119 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><strong>Silk Route Navigators - 丝路领航</strong></title>
+    <title>Silk Route Navigators</title>
     <style>
         body {
-            background-color: #F3F3F3;
-            color: #333;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         header {
-            background-color: #6A0DAD; /* Main color: Purple */
+            background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-        a, .btn {
-            background-color: #FFD700; /* Accent color: Yellow */
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+        .company-intro, .vision, .founder-message, .services {
+            padding: 20px;
         }
-        a:hover, .btn:hover {
-            background-color: #FDC700; /* Slightly lighter yellow */
+        .company-intro img, .founder-message img, .services img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .vision, .founder-message, .services {
+            text-align: left;
+        }
+        h2 {
+            color: #333;
         }
         footer {
-            background-color: #6A0DAD;
+            background-color: #333;
             color: #fff;
-            padding: 10px;
             text-align: center;
-        }
-        .services, .about, .company-intro {
             padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .services img, .about img {
-            max-width: 40%;
-            height: auto;
-        }
-        .about p, .company-intro p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-indent: 2em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
         .lang-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #FFD700;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 8px;
-        }
-        img.header-img {
-            width: 80%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-        strong {
-            font-weight: bold;
-        }
-        .intro-section {
-            text-align: center;
-        }
-        .founder-message {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .founder-message img {
-            width: 40%;
-            height: auto;
-        }
-        .product-service {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .product-service img {
-            width: 40%;
-            height: auto;
+            text-align: right;
+            padding: 10px;
         }
     </style>
     <script>
         function switchLanguage() {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === 'en') {
-                document.documentElement.lang = 'zh';
-                document.getElementById('company-name').innerHTML = '丝路领航';
-                document.getElementById('company-tagline').innerHTML = '高端商务团，开启您的长三角商务之旅';
-                document.getElementById('intro-title').innerHTML = '公司简介';
-                document.getElementById('intro-text').innerHTML = '丝路领航是一家以定制化高端商务考察服务为核心的企业，专注于为欧美及其他发达国家的企业家、投资者和行业领袖提供精准的市场洞察。我们深入探索中国长三角的科技创新、高端制造和商业生态，依托与知名企业、高校及政府平台的紧密合作，提供无与伦比的商务考察体验。';
-                document.getElementById('vision-title').innerHTML = '公司愿景';
-                document.getElementById('vision-text').innerHTML = '成为全球领先的商务考察服务提供商，通过定制化的行程和高效的跨境对接，搭建全球企业与中国市场的合作桥梁，帮助客户在瞬息万变的全球市场中保持竞争优势，推动科技创新与可持续商业发展。';
-                document.getElementById('founder-title').innerHTML = '创始人寄语';
-                document.getElementById('founder-text').innerHTML = '作为丝路领航的创始人，我深信，技术的革新与商业的繁荣相辅相成。中国的科技力量和制造业崛起不仅是全球经济版图中的重要部分，也为世界带来了无数机会。我们希望通过丝路领航的高端服务，帮助您快速而深入地了解这片充满活力的市场，并在全球科技和商业浪潮中找到属于您的机遇。丝路领航不仅是您的向导，更是助您在这条丝路上成功的伙伴。';
-                document.getElementById('services-title').innerHTML = '公司主要产品与服务';
-                document.getElementById('services-list').innerHTML = '<li><strong>A：</strong> 高端定制商务考察团 专为全球高端客户量身定制的商务考察团，涵盖科技创新、智能制造、绿色科技等最具前沿的行业。通过亲临行业巨头及创新企业，客户将获取最新市场信息，了解商业合作与投资的机会。</li><li><strong>B：</strong> 科技与创新企业深度考察 我们带领客户走访中国最具活力的科技企业，深入探索包括自动驾驶、人工智能、5G技术、机器人等领域的创新成果。通过与顶级企业和科研机构的对话，客户可获得对未来市场的深入理解。</li><li><strong>C：</strong> 全球商务对接与合作平台 借助我们强大的行业网络和中外合作资源，丝路领航为客户提供量身打造的商务对接服务。无论是寻找投资机会、建立战略合作伙伴，还是了解最新的市场动态，我们都能帮助您实现全球市场的深度布局。</li><li><strong>D：</strong> VIP尊享服务 针对顶级客户，我们提供VIP级别的商务旅行定制服务，包括高端翻译、豪华商务专车、五星级酒店以及顶级商务晚宴安排。我们确保每一位客户享受到无缝衔接的服务体验，助您在轻松、愉悦的氛围中高效开展商务活动。</li>';
-            } else {
-                document.documentElement.lang = 'en';
-                document.getElementById('company-name').innerHTML = 'Silk Route Navigators';
-                document.getElementById('company-tagline').innerHTML = 'Premium Business Tours of China\'s Yangtze River Delta';
-                document.getElementById('intro-title').innerHTML = 'Company Overview';
-                document.getElementById('intro-text').innerHTML = 'Silk Route Navigators is a company specializing in bespoke high-end business tours, focused on providing entrepreneurs, investors, and industry leaders from Europe, the US, and other developed countries with deep market insights. We explore the technological innovation, advanced manufacturing, and business ecosystems of China\'s Yangtze River Delta, leveraging close partnerships with leading companies, universities, and government entities to deliver unparalleled business tour experiences.';
-                document.getElementById('vision-title').innerHTML = 'Our Vision';
-                document.getElementById('vision-text').innerHTML = 'To become the world’s leading business tour provider, building a bridge for global businesses to connect with the Chinese market through customized trips and effective cross-border engagement, helping clients stay competitive in the fast-changing global marketplace while promoting technological innovation and sustainable business growth.';
-                document.getElementById('founder-title').innerHTML = 'Founder\'s Message';
-                document.getElementById('founder-text').innerHTML = 'As the founder of Silk Route Navigators, I firmly believe that technological innovation and business prosperity go hand in hand. China’s rise in technology and manufacturing is not only a crucial part of the global economic landscape but also brings countless opportunities to the world. Through our premium services, we aim to help you quickly and thoroughly understand this vibrant market and find your opportunities in the global wave of technology and business. Silk Route Navigators is not just your guide but also your partner for success on this journey.';
-                document.getElementById('services-title').innerHTML = 'Our Main Products and Services';
-                document.getElementById('services-list').innerHTML = '<li><strong>A:</strong> Premium Customized Business Tours Tailor-made business tours for high-end global clients, covering cutting-edge industries such as technological innovation, smart manufacturing, and green technology. Clients will visit industry giants and innovative enterprises to gain the latest market insights and explore business collaboration and investment opportunities.</li><li><strong>B:</strong> In-depth Technology & Innovation Tours We lead clients through China’s most dynamic tech companies, exploring innovations in autonomous driving, AI, 5G, robotics, and more. Through dialogues with top enterprises and research institutions, clients can gain a deep understanding of future market trends.</li><li><strong>C:</strong> Global Business Matching & Cooperation Platform Leveraging our strong industry network and international partnerships, Silk Route Navigators offers tailored business matching services. Whether you are looking for investment opportunities, establishing strategic partnerships, or gaining insights into the latest market dynamics, we help you navigate the global marketplace effectively.</li><li><strong>D:</strong> VIP Exclusive Services For top-tier clients, we provide VIP-level business travel customization services, including high-end translation, luxury business cars, five-star hotels, and top-tier business dinner arrangements. We ensure every client enjoys a seamless service experience, allowing you to conduct business efficiently in a relaxed and pleasant atmosphere.</li>';
+            const elements = {
+                "intro-title": { en: "Company Overview", zh: "公司简介" },
+                "intro-text": {
+                    en: "Silk Route Navigators is a company specializing in bespoke high-end business tours, focused on providing entrepreneurs, investors, and industry leaders from Europe, the US, and other developed countries with deep market insights. We explore the technological innovation, advanced manufacturing, and business ecosystems of China&apos;s Yangtze River Delta, leveraging close partnerships with leading companies, universities, and government entities to deliver unparalleled business tour experiences.",
+                    zh: "丝路领航公司专注于定制高端商务考察，旨在为来自欧美等发达国家的企业家、投资者和行业领袖提供深入的市场见解。我们考察中国长三角地区的技术创新、先进制造和商业生态系统，依托与领先企业、大学和政府部门的密切合作，提供无与伦比的商务考察体验。"
+                },
+                "vision-title": { en: "Our Vision", zh: "我们的愿景" },
+                "vision-text": {
+                    en: "To become the world’s leading business tour provider, building a bridge for global businesses to connect with the Chinese market through customized trips and effective cross-border engagement, helping clients stay competitive in the fast-changing global marketplace while promoting technological innovation and sustainable business growth.",
+                    zh: "成为全球领先的商务考察服务提供商，通过定制化行程和高效的跨境交流为全球企业搭建与中国市场连接的桥梁，帮助客户在快速变化的全球市场中保持竞争力，推动技术创新和可持续的商业增长。"
+                },
+                "founder-title": { en: "Founder's Message", zh: "创始人寄语" },
+                "founder-text": {
+                    en: "As the founder of Silk Route Navigators, I firmly believe that technological innovation and business prosperity go hand in hand. China’s rise in technology and manufacturing is not only a crucial part of the global economic landscape but also brings countless opportunities to the world. Through our premium services, we aim to help you quickly and thoroughly understand this vibrant market and find your opportunities in the global wave of technology and business. Silk Route Navigators is not just your guide but also your partner for success on this journey.",
+                    zh: "作为丝路领航的创始人，我坚信技术创新与商业繁荣密不可分。中国在技术和制造业的崛起不仅是全球经济格局的重要组成部分，也为世界带来了无数机遇。通过我们的高端服务，我们致力于帮助您快速全面地了解这个充满活力的市场，并在全球技术与商业浪潮中找到属于您的机会。丝路领航不仅是您的向导，更是您在这段旅程中成功的伙伴。"
+                },
+                "services-title": { en: "Our Main Products and Services", zh: "我们的主要产品和服务" },
+                "services-list": {
+                    en: '<li><strong>A:</strong> Premium Customized Business Tours Tailor-made business tours for high-end global clients, covering cutting-edge industries such as technological innovation, smart manufacturing, and green technology. Clients will visit industry giants and innovative enterprises to gain the latest market insights and explore business collaboration and investment opportunities.</li>' +
+                        '<li><strong>B:</strong> In-depth Technology & Innovation Tours We lead clients through China’s most dynamic tech companies, exploring innovations in autonomous driving, AI, 5G, robotics, and more. Through dialogues with top enterprises and research institutions, clients can gain a deep understanding of future market trends.</li>' +
+                        '<li><strong>C:</strong> Global Business Matching & Cooperation Platform Leveraging our strong industry network and international partnerships, Silk Route Navigators offers tailored business matching services. Whether you are looking for investment opportunities, establishing strategic partnerships, or gaining insights into the latest market dynamics, we help you navigate the global marketplace effectively.</li>' +
+                        '<li><strong>D:</strong> VIP Exclusive Services For top-tier clients, we provide VIP-level business travel customization services, including high-end translation, luxury business cars, five-star hotels, and top-tier business dinner arrangements. We ensure every client enjoys a seamless service experience, allowing you to conduct business efficiently in a relaxed and pleasant atmosphere.</li>',
+                    zh: '<li><strong>A:</strong> 高端定制商务考察 为全球高端客户量身定制的商务考察，涵盖技术创新、智能制造、绿色科技等前沿行业。客户将参观行业巨头和创新企业，获取最新市场见解，并探索商务合作和投资机会。</li>' +
+                        '<li><strong>B:</strong> 深度技术创新考察 我们带领客户深入中国最具活力的科技公司，探索自动驾驶、人工智能、5G、机器人等领域的创新。通过与顶尖企业和研究机构的对话，客户可以深入了解未来市场趋势。</li>' +
+                        '<li><strong>C:</strong> 全球商务对接与合作平台 借助我们强大的行业网络和国际合作伙伴关系，丝路领航为客户提供量身定制的商务对接服务。无论您是寻找投资机会、建立战略伙伴关系，还是获取最新的市场动态，我们都能帮助您高效导航全球市场。</li>' +
+                        '<li><strong>D:</strong> VIP专属服务 针对顶级客户，我们提供VIP级别的商务旅行定制服务，包括高端翻译服务、豪华商务车辆、五星级酒店以及顶级商务晚宴安排。我们确保每位客户享受无缝的服务体验，让您在轻松愉快的氛围中高效开展商务活动。</li>'
+                }
+            };
+            const currentLanguage = document.getElementById('intro-title').innerHTML === elements['intro-title'].en ? 'zh' : 'en';
+
+            for (const key in elements) {
+                const el = document.getElementById(key);
+                if (el) el.innerHTML = elements[key][currentLanguage];
+            }
+
+            const servicesList = document.getElementById('services-list');
+            if (servicesList) {
+                servicesList.innerHTML = elements['services-list'][currentLanguage];
             }
         }
     </script>
@@ -144,28 +114,24 @@
     </div>
     
     <div class="founder-message">
-        <div>
-            <h2 id="founder-title">Founder&apos;s Message</h2>
-            <p id="founder-text">As the founder of Silk Route Navigators, I firmly believe that technological innovation and business prosperity go hand in hand. China’s rise in technology and manufacturing is not only a crucial part of the global economic landscape but also brings countless opportunities to the world. Through our premium services, we aim to help you quickly and thoroughly understand this vibrant market and find your opportunities in the global wave of technology and business. Silk Route Navigators is not just your guide but also your partner for success on this journey.</p>
-        </div>
+        <h2 id="founder-title">Founder's Message</h2>
+        <p id="founder-text">As the founder of Silk Route Navigators, I firmly believe that technological innovation and business prosperity go hand in hand. China’s rise in technology and manufacturing is not only a crucial part of the global economic landscape but also brings countless opportunities to the world. Through our premium services, we aim to help you quickly and thoroughly understand this vibrant market and find your opportunities in the global wave of technology and business. Silk Route Navigators is not just your guide but also your partner for success on this journey.</p>
         <img src="founder_image.jpg" alt="Founder">
     </div>
-
+    
     <div class="services">
-        <div>
-            <h2 id="services-title">Our Main Products and Services</h2>
-            <ul id="services-list">
-                <li><strong>A:</strong> Premium Customized Business Tours Tailor-made business tours for high-end global clients, covering cutting-edge industries such as technological innovation, smart manufacturing, and green technology. Clients will visit industry giants and innovative enterprises to gain the latest market insights and explore business collaboration and investment opportunities.</li>
-                <li><strong>B:</strong> In-depth Technology & Innovation Tours We lead clients through China’s most dynamic tech companies, exploring innovations in autonomous driving, AI, 5G, robotics, and more. Through dialogues with top enterprises and research institutions, clients can gain a deep understanding of future market trends.</li>
-                <li><strong>C:</strong> Global Business Matching & Cooperation Platform Leveraging our strong industry network and international partnerships, Silk Route Navigators offers tailored business matching services. Whether you are looking for investment opportunities, establishing strategic partnerships, or gaining insights into the latest market dynamics, we help you navigate the global marketplace effectively.</li>
-                <li><strong>D:</strong> VIP Exclusive Services For top-tier clients, we provide VIP-level business travel customization services, including high-end translation, luxury business cars, five-star hotels, and top-tier business dinner arrangements. We ensure every client enjoys a seamless service experience, allowing you to conduct business efficiently in a relaxed and pleasant atmosphere.</li>
-            </ul>
-        </div>
-        <img src="services_image.jpg" alt="Services">
+        <h2 id="services-title">Our Main Products and Services</h2>
+        <ul id="services-list">
+            <li><strong>A:</strong> Premium Customized Business Tours Tailor-made business tours for high-end global clients, covering cutting-edge industries such as technological innovation, smart manufacturing, and green technology. Clients will visit industry giants and innovative enterprises to gain the latest market insights and explore business collaboration and investment opportunities.</li>
+            <li><strong>B:</strong> In-depth Technology & Innovation Tours We lead clients through China’s most dynamic tech companies, exploring innovations in autonomous driving, AI, 5G, robotics, and more. Through dialogues with top enterprises and research institutions, clients can gain a deep understanding of future market trends.</li>
+            <li><strong>C:</strong> Global Business Matching & Cooperation Platform Leveraging our strong industry network and international partnerships, Silk Route Navigators offers tailored business matching services. Whether you are looking for investment opportunities, establishing strategic partnerships, or gaining insights into the latest market dynamics, we help you navigate the global marketplace effectively.</li>
+            <li><strong>D:</strong> VIP Exclusive Services For top-tier clients, we provide VIP-level business travel customization services, including high-end translation, luxury business cars, five-star hotels, and top-tier business dinner arrangements. We ensure every client enjoys a seamless service experience, allowing you to conduct business efficiently in a relaxed and pleasant atmosphere.</li>
+        </ul>
+        <img src="service_image.jpg" alt="Services">
     </div>
     
     <footer>
-        <p>&copy; 2025 Silk Route Navigators. All Rights Reserved.</p>
+        <p>Silk Route Navigators &copy; 2025. All rights reserved.</p>
     </footer>
 </body>
 </html>
