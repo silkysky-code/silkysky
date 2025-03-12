@@ -36,6 +36,7 @@
         }
         .section {
             margin: 40px;
+            line-height: 1.5;
         }
         .section h2 {
             font-size: 28px;
@@ -44,7 +45,7 @@
         }
         .section p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.5;
             text-align: justify;
         }
         /* 浅紫色渐变分割线 */
@@ -60,7 +61,7 @@
             padding: 20px 0;
         }
         .section img {
-            max-width: 100%;
+            max-width: 50%; /* 缩小图片大小为原来的一半 */
             height: auto;
         }
         .content {
@@ -84,6 +85,11 @@
                 }
             });
         }
+
+        // 默认显示英文版本
+        document.addEventListener('DOMContentLoaded', function () {
+            switchLanguage('en');
+        });
     </script>
 </head>
 <body>
@@ -97,10 +103,7 @@
     </nav>
     <div class="section">
         <h2 data-en="Section 1: Company Overview" data-zh="公司简介"></h2>
-        <div class="content">
-            <p data-en="Silk Route Navigators specializes in organizing high-end business tours in the Yangtze River Delta region of China. Our services are tailored for business executives who are looking to explore business opportunities and cultural experiences in the region." data-zh="丝路领航专注于组织中国长三角地区的高端商务考察团。我们的服务专为希望探索该地区商业机会和文化体验的企业高管量身定制。"></p>
-            <img src="images/header.jpg" alt="Company Overview">
-        </div>
+        <p data-en="Silk Route Navigators specializes in organizing high-end business tours in the Yangtze River Delta region of China. Our services are tailored for business executives who are looking to explore business opportunities and cultural experiences in the region." data-zh="丝路领航专注于组织中国长三角地区的高端商务考察团。我们的服务专为希望探索该地区商业机会和文化体验的企业高管量身定制。"></p>
     </div>
     <div class="divider"></div>
     <div class="section">
