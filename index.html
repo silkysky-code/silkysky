@@ -15,8 +15,8 @@
             background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
-            padding: 10px 0;
-            font-size: 24px;
+            padding: 20px 0;
+            font-size: 28px;
         }
         nav {
             text-align: center;
@@ -26,9 +26,9 @@
             background-color: #6a11cb;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             margin: 5px;
         }
         nav button:hover {
@@ -36,19 +36,21 @@
         }
         .section {
             margin: 40px;
-            line-height: 1.5;
+            line-height: 1.8;
         }
         .section h2 {
-            font-size: 28px;
+            font-size: 32px;
             color: #6a11cb;
             text-align: center;
+            margin-bottom: 10px;
         }
         .section p {
-            font-size: 18px;
-            line-height: 1.5;
+            font-size: 20px;
+            line-height: 1.8;
             text-align: justify;
+            text-indent: 2em; /* 首行缩进两格 */
+            margin-bottom: 20px;
         }
-        /* 浅紫色渐变分割线 */
         .divider {
             height: 4px;
             background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
@@ -59,19 +61,22 @@
             color: white;
             text-align: center;
             padding: 20px 0;
+            font-size: 18px;
         }
         .section img {
-            max-width: 50%; /* 缩小图片大小为原来的一半 */
+            max-width: 50%;
             height: auto;
+            margin-bottom: 20px;
         }
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 30px; /* 文字和图片之间增加间距 */
         }
         .content img {
             max-width: 45%;
-            margin-right: 20px;
+            margin-right: 40px; /* 增加文字和图片的距离 */
         }
     </style>
     <script>
@@ -103,13 +108,15 @@
     </nav>
     <div class="section">
         <h2 data-en="Section 1: Company Overview" data-zh="公司简介"></h2>
-        <p data-en="Silk Route Navigators specializes in organizing high-end business tours in the Yangtze River Delta region of China. Our services are tailored for business executives who are looking to explore business opportunities and cultural experiences in the region." data-zh="丝路领航专注于组织中国长三角地区的高端商务考察团。我们的服务专为希望探索该地区商业机会和文化体验的企业高管量身定制。"></p>
+        <p data-en="Silk Route Navigators specializes in organizing high-end business tours in the Yangtze River Delta region of China. Our services are tailored for business executives who are looking to explore business opportunities and cultural experiences in the region." 
+           data-zh="丝路领航专注于组织中国长三角地区的高端商务考察团。我们的服务专为希望探索该地区商业机会和文化体验的企业高管量身定制。"></p>
     </div>
     <div class="divider"></div>
     <div class="section">
         <h2 data-en="Founder Message" data-zh="创始人寄语"></h2>
         <div class="content">
-            <p data-en="As the founder of Silk Route Navigators, I believe in creating unique and personalized business tour experiences that offer not only business insights but also cultural enrichment. Our mission is to bridge the gap between China and the global business community." data-zh="作为丝路领航的创始人，我相信创造独特且个性化的商务考察体验，不仅提供商业洞察，还能丰富文化交流。我们的使命是架起中国与全球商业社区之间的桥梁。"></p>
+            <p data-en="As the founder of Silk Route Navigators, I believe in creating unique and personalized business tour experiences that offer not only business insights but also cultural enrichment. Our mission is to bridge the gap between China and the global business community." 
+               data-zh="作为丝路领航的创始人，我相信创造独特且个性化的商务考察体验，不仅提供商业洞察，还能丰富文化交流。我们的使命是架起中国与全球商业社区之间的桥梁。"></p>
             <img src="images/business2.jpg" alt="Founder Message">
         </div>
     </div>
@@ -118,7 +125,8 @@
         <h2 data-en="Our Products & Services" data-zh="公司主要产品与服务"></h2>
         <div class="content">
             <img src="images/business.jpg" alt="Our Products & Services">
-            <p data-en="We offer customized tours that include visits to top corporations, universities, and cultural landmarks. Each tour is designed to maximize business insights and networking opportunities for participants." data-zh="我们提供定制化的考察团，包括参观顶级企业、大学和文化地标。每个考察团都旨在为参与者最大化商业洞察和社交机会。"></p>
+            <p data-en="We offer customized tours that include visits to top corporations, universities, and cultural landmarks. Each tour is designed to maximize business insights and networking opportunities for participants." 
+               data-zh="我们提供定制化的考察团，包括参观顶级企业、大学和文化地标。每个考察团都旨在为参与者最大化商业洞察和社交机会。"></p>
         </div>
     </div>
     <div class="divider"></div>
