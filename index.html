@@ -7,130 +7,120 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
         }
         header {
-            background: linear-gradient(to right, #8A2BE2, #DA70D6);
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
-            padding: 10px;
             text-align: center;
+            padding: 10px 0;
+            font-size: 24px;
         }
-        header h1, header h3 {
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
             margin: 5px;
         }
-        header button {
-            cursor: pointer;
-            background-color: white;
-            color: #6A0DAD;
-            padding: 10px;
-            border: none;
-            font-size: 14px;
-            margin-top: 10px;
-            border-radius: 5px;
+        nav button:hover {
+            background-color: #2575fc;
         }
-        .intro-section, .vision, .founder-message, .services {
-            padding: 20px;
-            margin: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            display: flex;
-            align-items: flex-start;
+        .section {
+            margin: 40px;
         }
-        .intro-section img, .services img {
-            max-width: 40%;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #6A0DAD;
+        .section h2 {
+            font-size: 28px;
+            color: #6a11cb;
             text-align: center;
+        }
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        /* 浅紫色渐变分割线 */
+        .divider {
+            height: 4px;
+            background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+            margin: 20px 0;
         }
         footer {
-            text-align: center;
-            padding: 10px;
-            background: linear-gradient(to right, #8A2BE2, #DA70D6);
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content img {
+            max-width: 45%;
+            margin-right: 20px;
         }
     </style>
     <script>
-        function switchLanguage() {
-            const englishElements = document.querySelectorAll('.en');
-            const chineseElements = document.querySelectorAll('.zh');
-            englishElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
-            chineseElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
-        }
-        window.onload = function() {
-            // 默认显示英文，隐藏中文
-            const chineseElements = document.querySelectorAll('.zh');
-            chineseElements.forEach(el => el.style.display = 'none');
+        function switchLanguage(lang) {
+            var elements = document.querySelectorAll('[data-en], [data-zh]');
+            elements.forEach(function(el) {
+                if (lang === 'en') {
+                    el.textContent = el.getAttribute('data-en');
+                } else {
+                    el.textContent = el.getAttribute('data-zh');
+                }
+            });
         }
     </script>
 </head>
 <body>
     <header>
-        <h1 id="company-name">Silk Route Navigators 丝路领航</h1>
-        <h3 id="company-tagline" class="en">Premium Business Tours of China's Yangtze River Delta</h3>
-        <h3 id="company-tagline" class="zh">高端中国长三角商务考察团</h3>
-        <button class="lang-switch" onclick="switchLanguage()">中文/English</button>
+        Silk Route Navigators 丝路领航<br>
+        <span data-en="High-end China Yangtze River Delta Business Tours" data-zh="高端中国长三角商务考察团"></span>
     </header>
-
-    <section class="company-intro intro-section">
-        <img src="images/header.jpg" alt="Company Image">
-        <div>
-            <h2 class="en">Company Overview</h2>
-            <h2 class="zh">公司简介</h2>
-            <p class="en">
-                Silk Route Navigators is a company specializing in bespoke high-end business tours, focused on providing entrepreneurs, investors, and industry leaders from Europe, the US, and other developed countries with deep market insights. We explore the technological innovation, advanced manufacturing, and business ecosystems of China’s Yangtze River Delta, leveraging close partnerships with leading companies, universities, and government entities to deliver unparalleled business tour experiences.
-            </p>
-            <p class="zh">
-                丝路领航是一家专注于提供高端定制化商务考察的公司，旨在为来自欧美及其他发达国家的企业家、投资人及行业领袖提供深入的市场洞察。我们深入考察中国长三角的科技创新、先进制造和商业生态系统，借助与领先企业、大学及政府机构的紧密合作，为客户提供无与伦比的商务考察体验。
-            </p>
+    <nav>
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('zh')">中文</button>
+    </nav>
+    <div class="section">
+        <h2 data-en="Section 1: Company Overview" data-zh="板块一：公司简介"></h2>
+        <div class="content">
+            <img src="images/business2.jpg" alt="Company Overview">
+            <p data-en="Silk Route Navigators specializes in organizing high-end business tours in the Yangtze River Delta region of China. Our services are tailored for business executives who are looking to explore business opportunities and cultural experiences in the region." data-zh="丝路领航专注于组织中国长三角地区的高端商务考察团。我们的服务专为希望探索该地区商业机会和文化体验的企业高管量身定制。"></p>
         </div>
-    </section>
-
-    <section class="vision">
-        <h2 class="en">Our Vision</h2>
-        <h2 class="zh">我们的愿景</h2>
-        <p class="en">
-            To become the world’s leading business tour provider, building a bridge for global businesses to connect with the Chinese market through customized trips and effective cross-border engagement, helping clients stay competitive in the fast-changing global marketplace while promoting technological innovation and sustainable business growth.
-        </p>
-        <p class="zh">
-            成为全球领先的商务考察服务提供商，通过定制化考察和有效的跨境合作，搭建全球企业与中国市场的桥梁，帮助客户在瞬息万变的全球市场中保持竞争力，同时推动科技创新和可持续发展。
-        </p>
-    </section>
-
-    <section class="founder-message">
-        <div>
-            <h2 class="en">Founder's Message</h2>
-            <h2 class="zh">创始人寄语</h2>
-            <p class="en">
-                As the founder of Silk Route Navigators, I firmly believe that technological innovation and business prosperity go hand in hand. China’s rise in technology and manufacturing is not only a crucial part of the global economic landscape but also brings countless opportunities to the world. Through our premium services, we aim to help global businesses understand and navigate this dynamic environment, leveraging China's growth for their own strategic advantages. We are committed to delivering the most insightful and valuable experiences through our tailored business tours.
-            </p>
-            <p class="zh">
-                作为丝路领航的创始人，我坚信科技创新与商业繁荣密不可分。中国在科技与制造领域的崛起不仅是全球经济格局中不可忽视的一部分，同时也为世界带来了无数的机遇。通过我们的高端服务，我们希望帮助全球企业理解并掌握这一充满活力的环境，利用中国的增长为其战略优势提供动力。我们承诺通过量身定制的商务考察为客户提供最具洞察力和价值的体验。
-            </p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+        <h2 data-en="Section 2: Founder Message" data-zh="板块二：创始人寄语"></h2>
+        <div class="content">
+            <p data-en="As the founder of Silk Route Navigators, I believe in creating unique and personalized business tour experiences that offer not only business insights but also cultural enrichment. Our mission is to bridge the gap between China and the global business community." data-zh="作为丝路领航的创始人，我相信创造独特且个性化的商务考察体验，不仅提供商业洞察，还能丰富文化交流。我们的使命是架起中国与全球商业社区之间的桥梁。"></p>
+            <img src="images/business2.jpg" alt="Founder Message">
         </div>
-    </section>
-
-    <section class="services">
-        <img src="images/business.jpg" alt="Business Image">
-        <div>
-            <h2 class="en">Our Main Products and Services</h2>
-            <h2 class="zh">公司主要产品与服务</h2>
-            <p class="en">
-                Our services include exclusive access to top-tier companies in China, customized business meetings, site visits to innovation hubs, and curated experiences at major trade shows. We also offer private sessions with industry experts and government officials, enabling our clients to gain a deep understanding of the Chinese market and the strategic opportunities available.
-            </p>
-            <p class="zh">
-                我们的服务包括：访问中国顶级公司、定制商务会议、参观创新中心及策划大型展会体验。我们还为客户提供与行业专家和政府官员的私人会议，让他们深入了解中国市场及其战略机遇。
-            </p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+        <h2 data-en="Section 3: Our Products & Services" data-zh="板块三：公司主要产品与服务"></h2>
+        <div class="content">
+            <img src="images/business.jpg" alt="Our Products & Services">
+            <p data-en="We offer customized tours that include visits to top corporations, universities, and cultural landmarks. Each tour is designed to maximize business insights and networking opportunities for participants." data-zh="我们提供定制化的考察团，包括参观顶级企业、大学和文化地标。每个考察团都旨在为参与者最大化商业洞察和社交机会。"></p>
         </div>
-    </section>
-
+    </div>
+    <div class="divider"></div>
     <footer>
-        <p class="en">Contact us at <a href="mailto:silkysky@163.com">silkysky@163.com</a></p>
-        <p class="zh">联系我们: <a href="mailto:silkysky@163.com">silkysky@163.com</a></p>
+        <p data-en="Contact us at: silkysky@163.com" data-zh="联系我们: silkysky@163.com"></p>
     </footer>
 </body>
 </html>
