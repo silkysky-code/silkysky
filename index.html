@@ -6,77 +6,100 @@
     <title>Silk Route Navigators 丝路领航</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+            color: #333;
         }
         header {
             background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
-            padding: 20px 0;
-            font-size: 28px;
+            padding: 40px 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
         }
         nav {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         nav button {
             background-color: #6a11cb;
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 14px 28px;
             cursor: pointer;
             font-size: 18px;
-            margin: 5px;
+            margin: 10px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
         }
         nav button:hover {
             background-color: #2575fc;
         }
         .section {
-            margin: 40px;
-            line-height: 1.8;
+            margin: 60px auto;
+            max-width: 1200px;
+            padding: 20px 40px;
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         .section h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: #6a11cb;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
         }
         .section p {
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.8;
             text-align: justify;
-            text-indent: 2em; /* 首行缩进两格 */
-            margin-bottom: 20px;
+            text-indent: 2em; /* 首行缩进 */
+            margin-bottom: 25px;
         }
         .divider {
-            height: 4px;
+            height: 5px;
             background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
-            margin: 20px 0;
+            margin: 40px 0;
+            border-radius: 2px;
         }
         footer {
             background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
-            padding: 20px 0;
-            font-size: 18px;
+            padding: 30px 0;
+            font-size: 20px;
         }
         .section img {
-            max-width: 50%;
+            max-width: 45%;
             height: auto;
             margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px; /* 文字和图片之间增加间距 */
+            gap: 40px;
+            margin-bottom: 40px; /* 增加文字和图片的间距 */
         }
         .content img {
             max-width: 45%;
-            margin-right: 40px; /* 增加文字和图片的距离 */
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .content img {
+                max-width: 100%;
+            }
         }
     </style>
     <script>
